@@ -1,6 +1,5 @@
 import pandas as pd
 import plotly.express as px
-import dash_bootstrap_components as dbc
 from dash import Dash, dcc, html, dash_table, Input, Output, State, callback
 from dash.dash_table.Format import Format, Group, Scheme, Symbol
 import datetime as dt
