@@ -15,12 +15,10 @@ fig = px.line(djia, x='Date', y='Close', log_y=True)
 
 app = Dash(__name__)
 
+app = DJIA.server
+
 app.layout = html.Div(children=[
     html.H1(children='DJIA Daily Close'),
-    dcc.DatePickerRange(
-        end_date_placeholder_text="End Period",
-        calendar_orientation='vertical',
-    ),
     dcc.Graph(figure=fig)
 ])
 
