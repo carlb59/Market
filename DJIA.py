@@ -12,8 +12,7 @@ djia_m = djia.groupby('Month').mean('Close').reset_index()
 fig = px.line(djia, x='Date', y='Close', log_y=True)
 
 app = Dash(__name__)
-
-app = DJIA.server
+server = app.server
 
 app.layout = html.Div(children=[
     html.H1(children='DJIA Daily Close'),
